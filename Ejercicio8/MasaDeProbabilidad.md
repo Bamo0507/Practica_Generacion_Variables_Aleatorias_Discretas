@@ -1,0 +1,6 @@
+## **Ejercicio 8**
+
+- Primero, se calcula la probabilidad de que en una sola iteración se genere el candidato i y ademas sea aceptado, lo cual, al ser dos eventos secuenciales, se obtiene multiplicando P(X=i) por P(Y=j dado X=i).
+- Luego, para poder normalizar esta probabilidad, se necesita saber cual es la probabilidad de aceptar algun candidato en una iteracion cualquiera, sin importar cual sea. Esto se obtiene sumando la expresion anterior sobre todos los posibles valores de i, y por probabilidad total, eso es P(Y=j).
+- Posteriormente, dado que el algoritmo se repite hasta que finalmente se acepta un candidato, la probabilidad de que el valor aceptado sea justamente i corresponde a la razon entre la probabilidad conjunta de generar i y aceptarlo, y la probabilidad total de aceptar algo en una iteracion. Es decir, se divide P(X=i) por P(Y=j dado X=i) entre P(Y=j).
+- Finalmente, se observa que esa razon es exactamente la formula del Teorema de Bayes para P(X=i dado Y=j), por lo que se concluye que P(W=i) es igual a P(X=i dado Y=j).
